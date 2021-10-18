@@ -2,10 +2,21 @@
 
 void aufgabe_1() {
 
-    int eingabe; 
+    int eingabe;
 
+    char stern = '*';
 
+    scanf("%d",&eingabe);
 
+    if (eingabe == 5) {
+
+        for (int i = 0; i < 5;) {
+
+            printf("%c",stern);
+
+            i++;
+        }
+    } 
 }
 
 void aufgabe_2() {
