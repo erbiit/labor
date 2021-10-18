@@ -193,11 +193,13 @@ void aufgabe_3() {
     printf("\n");
 }
 
+
 void aufgabe_4() {
 
 
 
 }
+
 
 void aufgabe_5() {
 
@@ -205,17 +207,20 @@ void aufgabe_5() {
 
 }
 
+
 void aufgabe_6() {
 
 
 
 }
 
+
 void aufgabe_7() {
 
 
 
 }
+
 
 void aufgabe_8() {
 
@@ -229,7 +234,7 @@ int main () {
 
     //aufgabe_2();
 
-    aufgabe_3();
+    //aufgabe_3();
 
     //aufgabe_4();
 
