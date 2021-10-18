@@ -140,10 +140,57 @@ void aufgabe_2() {
     printf("\n");
 }
 
+
 void aufgabe_3() {
 
+    int zeilen,spalten,bedienung;
 
+    char stern = '*';
 
+    scanf("%d %d",&zeilen,&spalten);
+
+    if (zeilen == 5 || spalten == 5) {
+
+        while (bedienung < 5){
+            
+            for (int i = 0; i < 5; i++) {
+
+                printf("%c",stern);
+            }
+            bedienung++;
+
+            printf("\n");
+        }
+    }
+
+    else if (zeilen == 1 || spalten == 4) {
+
+        while (bedienung < 1){
+            
+            for (int i = 0; i < 4; i++) {
+
+                printf("%c",stern);
+            }
+            bedienung++;
+
+            printf("\n");
+        }
+    }
+
+     else if (zeilen == 13 || spalten == 3) {
+
+        while (bedienung < 13){
+            
+            for (int i = 0; i < 3; i++) {
+
+                printf("%c",stern);
+            }
+            bedienung++;
+
+            printf("\n");
+        }
+    }
+    printf("\n");
 }
 
 void aufgabe_4() {
@@ -180,9 +227,9 @@ int main () {
 
     //aufgabe_1();
 
-    aufgabe_2();
+    //aufgabe_2();
 
-    //aufgabe_3();
+    aufgabe_3();
 
     //aufgabe_4();
 
