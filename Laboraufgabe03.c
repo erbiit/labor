@@ -143,7 +143,7 @@ void aufgabe_2() {
 
 void aufgabe_3() {
 
-    int zeilen,spalten,bedienung;
+    int zeilen,spalten,bedienung = 0;
 
     char stern = '*';
 
