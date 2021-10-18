@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+
 void aufgabe_1() {
 
     int eingabe;
@@ -49,7 +49,7 @@ void aufgabe_1() {
     }
     printf("\n");
 }
-*/
+
 
 void aufgabe_2() {
 
