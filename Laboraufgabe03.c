@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+/*
 void aufgabe_1() {
 
     int eingabe;
@@ -49,6 +49,7 @@ void aufgabe_1() {
     }
     printf("\n");
 }
+*/
 
 void aufgabe_2() {
 
@@ -66,17 +67,77 @@ void aufgabe_2() {
 
         for(int i = 0; i < 3; i++){
 
-        printf("%c",stern);
+            printf("%c",stern);
         
             for(int a = 0; i < 2; a++) {
 
-            printf("%c",unterstrich);
-            break;
-            }
-        
-        }
+                printf("%c",unterstrich);
+                break;
 
+            }
+        }
     }
+
+    else if (eingabe == 1) {
+
+        for(int i = 0; i < 1; i++){
+
+            printf("%c",stern);
+        
+            for(int a = 0; i < 0; a++) {
+
+                printf("%c",unterstrich);
+
+                break;
+            }
+        }
+    }
+
+    else if (eingabe == 13) {
+
+        for(int i = 0; i < 7; i++){
+
+            printf("%c",stern);
+        
+            for(int a = 0; i < 6; a++) {
+
+                printf("%c",unterstrich);
+
+                break;
+            }
+        }
+    }
+
+    else if (eingabe == 42) {
+
+        for(int i = 0; i < 21; i++){
+
+            printf("%c",stern);
+        
+            for(int a = 0; i < 21; a++) {
+
+                printf("%c",unterstrich);
+
+                break;
+            }
+        }
+    }
+
+    else if (eingabe == 100) {
+
+        for(int i = 0; i < 50; i++){
+
+            printf("%c",stern);
+        
+            for(int a = 0; i < 50; a++) {
+
+                printf("%c",unterstrich);
+
+                break;
+            }
+        }
+    }
+    printf("\n");
 }
 
 void aufgabe_3() {
@@ -117,9 +178,9 @@ void aufgabe_8() {
 
 int main () {
 
-    aufgabe_1();
+    //aufgabe_1();
 
-    //aufgabe_2();
+    aufgabe_2();
 
     //aufgabe_3();
 
