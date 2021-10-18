@@ -156,3 +156,5 @@ int main(void) {
   return 0;
 }
 */
+
+//Aufgaben alle Fertig
