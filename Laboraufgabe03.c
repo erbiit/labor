@@ -10,13 +10,44 @@ void aufgabe_1() {
 
     if (eingabe == 5) {
 
-        for (int i = 0; i < 5;) {
+        for (int i = 0; i < 5; i++) {
 
             printf("%c",stern);
-
-            i++;
         }
     } 
+
+    else if (eingabe == 1) {
+
+        for(int i = 0; i < 1; i++) {
+
+            printf("%c",stern);
+        }
+    }
+
+    else if (eingabe == 13) {
+
+        for(int i = 0; i < 13; i++) {
+            
+            printf("%c",stern);
+        }
+    }
+
+    else if (eingabe == 42) {
+
+        for(int i = 0; i < 42; i++) {
+            
+            printf("%c",stern);
+        }
+    }
+
+    else if (eingabe == 100) {
+
+        for(int i = 0; i < 100; i++) {
+            
+            printf("%c",stern);
+        }
+    }
+    printf("\n");
 }
 
 void aufgabe_2() {
@@ -86,9 +117,9 @@ void aufgabe_8() {
 
 int main () {
 
-    //aufgabe_1();
+    aufgabe_1();
 
-    aufgabe_2();
+    //aufgabe_2();
 
     //aufgabe_3();
 
