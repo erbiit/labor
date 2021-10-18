@@ -21,8 +21,31 @@ void aufgabe_1() {
 
 void aufgabe_2() {
 
+    int eingabe;
 
+    char stern,unterstrich;
 
+    stern = '*';
+
+    unterstrich = '_';
+
+    scanf("%d",&eingabe);
+
+    if (eingabe == 5){
+
+        for(int i = 0; i < 3; i++){
+
+        printf("%c",stern);
+        
+            for(int a = 0; i < 2; a++) {
+
+            printf("%c",unterstrich);
+            break;
+            }
+        
+        }
+
+    }
 }
 
 void aufgabe_3() {
@@ -63,9 +86,9 @@ void aufgabe_8() {
 
 int main () {
 
-    aufgabe_1();
+    //aufgabe_1();
 
-    //aufgabe_2();
+    aufgabe_2();
 
     //aufgabe_3();
 
