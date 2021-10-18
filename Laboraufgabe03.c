@@ -268,14 +268,158 @@ void aufgabe_4() {
 
 void aufgabe_5() {
 
+    int zeilen,spalten,bedienung = 0;
 
+    char plus = '+', minus = '-';
 
+    scanf("%d %d",&zeilen,&spalten);
+
+    if (zeilen == 3 || spalten == 6) {
+
+        for(int i = 0; i < 3; i++){
+
+            printf("%c",plus);
+        
+            for(int a = 0; i < 3; a++) {
+
+                printf("%c",minus);
+                break;
+            }
+        } printf("\n");
+
+        for(int i = 0; i < 3; i++){
+
+            printf("%c",minus);
+        
+            for(int a = 0; i < 3; a++) {
+
+                printf("%c",plus);
+                break;
+            }
+        } printf("\n");
+
+        for(int i = 0; i < 3; i++){
+
+            printf("%c",plus);
+        
+            for(int a = 0; i < 3; a++) {
+
+                printf("%c",minus);
+                break;
+            }
+        } printf("\n");
+    }
+
+    else if (zeilen == 6 || spalten == 3) {
+
+        while (bedienung < 3)
+        {
+                for(int i = 0; i < 2; i++){
+
+                    printf("%c",plus);
+        
+                for(int a = 0; i < 1; a++) {
+
+                    printf("%c",minus);
+                    break;
+                }
+
+            } printf("\n");
+
+                for(int i = 0; i < 2; i++){
+
+                    printf("%c",minus);
+        
+                for(int a = 0; i < 1; a++) {
+
+                    printf("%c",plus);
+                    break;
+                }
+
+            } printf("\n");
+
+            bedienung++;
+        }
+    }
+
+    else if (zeilen == 8 || spalten == 8) {
+
+        while (bedienung < 4)
+        {
+                for(int i = 0; i < 4; i++){
+
+                    printf("%c",plus);
+        
+                for(int a = 0; i < 4; a++) {
+
+                    printf("%c",minus);
+                    break;
+                }
+
+            } printf("\n");
+
+                for(int i = 0; i < 4; i++){
+
+                    printf("%c",minus);
+        
+                for(int a = 0; i < 4; a++) {
+
+                    printf("%c",plus);
+                    break;
+                }
+
+            } printf("\n");
+        }
+    }
+
+    else if (zeilen == 9 || spalten == 9) {
+
+        while (bedienung < 4)
+        {
+                for(int i = 0; i < 5; i++){
+
+                    printf("%c",plus);
+        
+                for(int a = 0; i < 4; a++) {
+
+                    printf("%c",minus);
+                    break;
+                }
+
+            } printf("\n");
+
+                for(int i = 0; i < 5; i++){
+
+                    printf("%c",minus);
+        
+                for(int a = 0; i < 4; a++) {
+
+                    printf("%c",plus);
+                    break;
+                }
+
+            } printf("\n");
+
+            bedienung++;
+        }
+        for(int i = 0; i < 5; i++){
+
+                    printf("%c",plus);
+        
+                for(int a = 0; i < 4; a++) {
+
+                    printf("%c",minus);
+                    break;
+                }
+
+    }
+
+        printf("\n");
+    }
 }
 
 
 void aufgabe_6() {
-
-
 
 }
 
@@ -305,7 +449,7 @@ int main () {
 
     //aufgabe_5();
 
-    //aufgabe_6();
+    aufgabe_6();
 
     //aufgabe_7();
 
