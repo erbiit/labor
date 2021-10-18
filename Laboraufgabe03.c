@@ -196,8 +196,73 @@ void aufgabe_3() {
 
 void aufgabe_4() {
 
+    int zeilen,spalten,bedienung = 0,zweite_bedienung = 0;
 
+    char stern = '*';
 
+    char leeres_zeichen = ' ';
+
+    scanf("%d %d",&zeilen,&spalten);
+
+    if (zeilen == 5 || spalten == 5) {
+            
+        for (int i = 0; i < 5; i++) {
+
+            printf("%c",stern);
+        }
+
+        printf("\n");
+        
+        while (bedienung < 3){
+
+            printf("%c%c%c%c%c",stern,leeres_zeichen,leeres_zeichen,leeres_zeichen,stern);
+            
+            bedienung++;
+
+            printf("\n");
+        }
+            
+        for (int i = 0; i < 5; i++) {
+
+            printf("%c",stern);
+        }
+    }
+
+    else if (zeilen == 1 || spalten == 4) {
+            
+        for (int i = 0; i < 4; i++) {
+
+            printf("%c",stern);
+        }
+        
+        printf("\n");
+    }
+
+    else if (zeilen == 13 || spalten == 3) {
+
+        for (int i = 0; i < 3; i++) {
+
+            printf("%c",stern);
+        }
+
+        printf("\n");
+        
+        while (zweite_bedienung < 11){
+
+            printf("%c%c%c",stern,leeres_zeichen,stern);
+            
+            zweite_bedienung++;
+
+            printf("\n");
+        }
+            
+        for (int i = 0; i < 3; i++) {
+
+            printf("%c",stern);
+        }
+
+        printf("\n");
+    }
 }
 
 
