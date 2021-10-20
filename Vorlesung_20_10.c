@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-//void flush_stdin();
-
 int main () {
 
     /*typedef menu; {FILE, OPEN} Menu;
@@ -22,7 +20,7 @@ int main () {
         printf("your choice? ");
         int r = scanf("%c",&c);
         printf("your choice is %c (%d)!\n",c ,r);
-        //flush_stdin();
+
     }
     
     return 0;
