@@ -15,52 +15,16 @@ void aufgabe_1() {
 
     scanf("%d",&eingabe);
 
-    if (eingabe == 5) {
+    for (int i = 0; i < eingabe; i++) {
 
-        for (int i = 0; i < 5; i++) {
+        printf("%c",stern);
 
-            printf("%c",stern);
-        }
-    } 
-
-    else if (eingabe == 1) {
-
-        for(int i = 0; i < 1; i++) {
-
-            printf("%c",stern);
-        }
     }
-
-    else if (eingabe == 13) {
-
-        for(int i = 0; i < 13; i++) {
-            
-            printf("%c",stern);
-        }
-    }
-
-    else if (eingabe == 42) {
-
-        for(int i = 0; i < 42; i++) {
-            
-            printf("%c",stern);
-        }
-    }
-
-    else if (eingabe == 100) {
-
-        for(int i = 0; i < 100; i++) {
-            
-            printf("%c",stern);
-        }
-    }
-    printf("\n");
 }
-
 
 void aufgabe_2() {
 
-    int eingabe;
+    int eingabe,a = 0;
 
     char stern,unterstrich;
 
@@ -70,79 +34,20 @@ void aufgabe_2() {
 
     scanf("%d",&eingabe);
 
-    if (eingabe == 5){
-
-        for(int i = 0; i < 3; i++){
-
+    while(a % eingabe)
+    {
+        for(int c = 0; c < eingabe; c++)
+        {
             printf("%c",stern);
-        
-            for(int a = 0; i < 2; a++) {
-
-                printf("%c",unterstrich);
-                break;
-
-            }
+            break;
         }
-    }
-
-    else if (eingabe == 1) {
-
-        for(int i = 0; i < 1; i++){
-
-            printf("%c",stern);
         
-            for(int a = 0; i < 0; a++) {
-
-                printf("%c",unterstrich);
-
-                break;
-            }
+        for(int b = 0; b < eingabe; b++) 
+        {
+            printf("%c",unterstrich);
+            break;
         }
-    }
-
-    else if (eingabe == 13) {
-
-        for(int i = 0; i < 7; i++){
-
-            printf("%c",stern);
-        
-            for(int a = 0; i < 6; a++) {
-
-                printf("%c",unterstrich);
-
-                break;
-            }
-        }
-    }
-
-    else if (eingabe == 42) {
-
-        for(int i = 0; i < 21; i++){
-
-            printf("%c",stern);
-        
-            for(int a = 0; i < 21; a++) {
-
-                printf("%c",unterstrich);
-
-                break;
-            }
-        }
-    }
-
-    else if (eingabe == 100) {
-
-        for(int i = 0; i < 50; i++){
-
-            printf("%c",stern);
-        
-            for(int a = 0; i < 50; a++) {
-
-                printf("%c",unterstrich);
-
-                break;
-            }
-        }
+        a++;
     }
     printf("\n");
 }
@@ -507,7 +412,7 @@ int main () {
 
     //aufgabe_1();
 
-    //aufgabe_2();
+    aufgabe_2();
 
     //aufgabe_3();
 
