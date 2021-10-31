@@ -6,21 +6,13 @@
       "type": "cppdbg",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
-      "cwd": "/Users/ero/Documents/GitLabor/labor",
+      "stopAtEntry": true,
+      "cwd": "/Users/ero/Documents/TI_Semester_1_WS21:22/Programmieren/labor",
       "environment": [],
-      "program": "/Users/ero/Documents/GitLabor/labor/build/Debug/outDebug",
+      "program": "/Users/ero/Documents/TI_Semester_1_WS21:22/Programmieren/labor/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "lldb",
-      "miDebuggerPath": "/usr/bin/lldb",
-      "externalConsole": false,
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "externalConsole": true
     }
   ]
 }
