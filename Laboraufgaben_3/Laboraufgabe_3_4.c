@@ -10,8 +10,6 @@ int main() {
 
     scanf("%d %d",&zeile, & spalte);
 
-    
-
     for(int b = 0; b < spalte; b++){
 
             printf("%c",star);
@@ -44,8 +42,6 @@ int main() {
 
         }
     }
-
-    printf("\n");
 
     return 0;
 

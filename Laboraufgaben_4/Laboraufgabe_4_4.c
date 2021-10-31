@@ -1,19 +1,27 @@
 #include <stdio.h>
 
 int main(){
-    int i, n = 0;
-    char arr[40];
-    char letters,vowel;
-    char arr_2[10] = {'a','e','i','o','u','A','E','I','O','U'};
 
-    scanf("%c %s",&vowel,&letters);~
+    int i,k,n = 0;
 
-    for(i = 0; i < letters; i++){
-        arr[i] = letters;
+    char vowel,arr[40],arr_2[10] = {'a','e','i','o','u','A','E','I','O','U'};
+
+    scanf("%c %s",&vowel,arr);
+
+    while (arr[n] != 0){++n;}
+  
+    for(i=0; arr[i]!=0; i++){
+        for(int j = 0; j < 10; j++){
+            if(arr[i] == arr_2[j]){
+                arr[i] = vowel;
+                break;
+            }
+        }
+        for(k = 0; k < arr[i]; k++){
+            printf("%c",arr[i]);
+            break;
+        }
     }
-
-    printf("%d",*arr);
-
-
+    
     return 0;
 }
