@@ -9,11 +9,11 @@ void append(char *str, char *new_word){
         str[i] = new_word[j];
         i++;
     }
-    str[i]='\0';
+    //str[i]='\0';
 }
 
 int main(){
-    char buffer[40] = "Hallo ";
-    append(buffer, "Welt");
+    char buffer[40] = "Hochschule ";
+    append(buffer, "Esslingen");
     printf("%s\n", buffer);
 }
