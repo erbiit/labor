@@ -9,7 +9,6 @@ void append(char *str, char *new_word){
         str[i] = new_word[j];
         i++;
     }
-    //str[i]='\0';
 }
 
 int main(){
