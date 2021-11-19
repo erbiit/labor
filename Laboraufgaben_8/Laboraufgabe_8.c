@@ -41,12 +41,12 @@ void print_feld(int generation){
 int main(){
 
     int pos_x, pos_y, generation;
-    char e;
+    char e[0];
 
     scanf("%d", &generation);
     
-    while(e != 'e'){
-        scanf("%s %d %d",&e, &pos_x, &pos_y);
+    while(*e != 'e'){
+        scanf("%s %d %d",e, &pos_x, &pos_y);
         zelle_leben(pos_x, pos_y);
     }
     print_feld(generation);
