@@ -8,39 +8,35 @@
 
 int feld[BREITE][HOEHE];
 
-void spielfeld(int generation){
-    for(int g = 0; g <= generation; g++){
-        
-        printf("--Generation: %d \n",g);
+void spielfeld(){
+    
+    for(int y = 0; y < HOEHE; y++){
 
-        for(int y = 0; y < HOEHE; y++){
-
-            for(int x = 0; x < BREITE; x++){
+        for(int x = 0; x < BREITE; x++){
                 
-                if(feld[x][y] == LEBEN){
+            if(feld[x][y] == LEBEN){
 
-                    feld[x][y] = ZELLE;
+                feld[x][y] = ZELLE;
 
-                    printf("%c",feld[x][y]);
-                }
-
-                else{
-
-                    feld[x][y] = TOTE_FELDER;
-
-                    printf("%c",feld[x][y]);
-
-                }
+                printf("%c",feld[x][y]);
             }
-            printf("\n");
+
+            else{
+
+                feld[x][y] = TOTE_FELDER;
+
+                printf("%c",feld[x][y]);
+
+            }
         }
+        printf("\n");
     }
 }
+
 
 void zelle_leben(int x, int y){
     feld[x][y] = LEBEN;
 }
-
 
 int main(){
 
@@ -57,7 +53,12 @@ int main(){
         zelle_leben(pos_x, pos_y);
 
     }
-    
-    spielfeld(generation);
-    
+
+    for(int i = 0; i <= generation; i++){
+        
+        printf("--Generation: %d \n",i);
+
+        spielfeld();
+
+    }
 }
