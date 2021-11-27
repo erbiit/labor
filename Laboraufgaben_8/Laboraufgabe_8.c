@@ -1,57 +1,118 @@
 #include <stdio.h>
-#define BREITE 20
-#define HOEHE 20
-#define ZELLE '#'
-#define TOTE_FELDER '.'
-#define GROESSE 20
-#define LEBEN 1
-#define TOT 0
+#define WIDTH 20
+#define HEIGHT 20
+#define CELL '#'
+#define DEAD_CELL '.'
 
-int feld[BREITE][HOEHE];
+int field[WIDTH][HEIGHT], new_field[WIDTH][HEIGHT]; 
 
-void zelle_leben(int x, int y){
-    feld[y][x] = LEBEN;
-    feld[y][x] = LEBEN;
-    feld[y][x] = LEBEN;
+
+void create_field(){
+	for(int y = 0; y < HEIGHT; y++)
+	{
+		for(int x = 0; x < WIDTH; x++)
+		{
+			field[x][y] = DEAD_CELL;
+		}
+	}
+
+	for(int y = 0; y < HEIGHT; y++)
+	{
+		for(int x = 0; x < WIDTH; x++)
+		{
+			new_field[x][y] = DEAD_CELL;
+		}
+	}
 }
+
+void print_field(){
+	for(int y = 0; y < HEIGHT; y++)
+   	{
+		for(int x = 0; x < WIDTH; x++)
+		{
+			printf("%c",field[x][y]);
+		}
+		printf("\n");
+	}
+}
+
+void rules(){
+	for(int y = 0; y < HEIGHT; y++){
+		for(int x = 0; x < WIDTH; x++){
+
+			int neighbour = 0;
+
+			if(field[x-1][y-1] == CELL){
+				neighbour += 1;
+			}
+			if(field[x][y-1] == CELL){
+				neighbour += 1;
+			}
+			if(field[x+1][y-1] == CELL){
+				neighbour += 1;
+			}
+			if(field[x-1][y] == CELL){
+				neighbour += 1;
+			}
+			if(field[x+1][y] == CELL){
+				neighbour += 1;
+			}
+			if(field[x-1][y+1] == CELL){
+				neighbour += 1;
+			}
+			if(field[x][y+1] == CELL){
+				neighbour += 1;
+			}
+			if(field[x+1][y+1] == CELL){
+				neighbour += 1;
+			}
+			if(field[x][y] == CELL && (neighbour == 2 || neighbour == 3)){
+				new_field[x][y] = CELL;
+			}
+			else if(field[x][y] == CELL && (neighbour < 2 || neighbour > 3)){
+				new_field[x][y] = DEAD_CELL;
+			}
+			else if(field[x][y] == DEAD_CELL && neighbour == 3){
+				new_field[x][y] = CELL;
+			}	
+		}
+   	}
+}
+
+void safe_new_field(){
+	for(int y = 0; y < HEIGHT; y++){
+		for(int x = 0; x < WIDTH; x++){
+			field[x][y] = new_field[x][y];
+		}
+	}
+}
+	
 
 int main(){
 
-    int pos_x, pos_y, generation;
-    char e[0];
+	int generation,pos_x,pos_y;
 
-    scanf("%d", &generation);
+	char input[0];
 
-    while(*e != 'e'){
+	scanf("%d",&generation); //Eingabe anzahl der Generationen
 
-        scanf("%s %d %d",e, &pos_x, &pos_y);
-        zelle_leben(pos_x, pos_y);
+	create_field(); //Feld erstellen
 
-    }
+	while(*input != 'e'){ //Eingabe Loop
 
-    for(int a = 0; a <= generation; a++){
-        printf("--Generation: %d \n",a);
+		scanf("%s %d %d", input, &pos_x, &pos_y); //Eingabe Position der Zelle
 
-        for(int b = 0; b < GROESSE; b++){
+		field[pos_x][pos_y] = CELL; //Auf der eingegebenen Positionen Zelle platzieren
+    }	
 
-            for(int c = 0; c < GROESSE; c++){
-                
-                if(feld[b][c] == LEBEN){
+	for(int gen = 0; gen <= generation; gen++){ //Genenrationen loopen
 
-                    feld[b][c] = ZELLE;
+		printf("-- Generation: %d \n", gen); //Ausgabe der Generationen
 
-                    printf("%c",feld[b][c]);
-                }
+		print_field(); //Print Feld mit Zelle
 
-                else{
+		rules(); //Nachbarn zählen und Regeln umsetzen
 
-                    feld[b][c] = TOTE_FELDER;
-
-                    printf("%c",feld[b][c]);
-
-                }
-            }
-            printf("\n");
-        }
-    }
+		safe_new_field(); //Speichern des neuen Feldes im Array
+	}
 }
