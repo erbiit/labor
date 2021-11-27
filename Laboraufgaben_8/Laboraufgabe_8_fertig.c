@@ -6,7 +6,6 @@
 
 int field[WIDTH][HEIGHT], new_field[WIDTH][HEIGHT]; 
 
-
 void create_field(){
 	for(int y = 0; y < HEIGHT; y++)
 	{
@@ -86,7 +85,6 @@ void safe_new_field(){
 		}
 	}
 }
-	
 
 int main(){
 
